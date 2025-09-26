@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration Form</title>
+  <style>   
+  body {
+      background-color: MistyRose;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #D2691E;
+      text-shadow: 1px 1px 1px #aaa;
+    }
+
+    table {
+      background-color: #fffaf0;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    td {
+      color: #333;
+      font-size: 16px;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      padding: 8px;
+      font-size: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #fff5ee;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 5px;
+    }
+
+    input[type="button"] {
+      background-color: #ff7f50;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+      background-color: #e67300;
+    }
+
+    select {
+      width: 60%;
+    }
+
+    #otherReligionInput,
+    #otherQuotaInput {
+      margin-top: 8px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    ::placeholder {
+      color: #888;
+    }
+
+    textarea {
+      resize: none;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fffaf0;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+  </style> 
+</head>
+<body bgcolor="MistyRose">
+
+<form action="/register" method="post">
+  <table align="center" width="700" cellpadding="10">
+    <tr><td colspan="2" align="center"><h1>Student Registration Form</h1></td></tr>
+
+    <tr><td>Admission no.:</td>
+      <td><input type="text" name="admission_no" required></td></tr>
+
+    <tr><td>First Name:</td>
+      <td><input type="text" name="first_name" required></td></tr>
+
+    <tr><td>Last Name:</td>
+      <td><input type="text" name="last_name"></td></tr>
+
+    <tr><td>Father's name:</td>
+      <td><input type="text" name="father_name" required></td></tr>
+
+    <tr><td>Date of birth:</td>
+      <td>
+        <select name="day"><option value="">Day</option>
+          <script>for(let i=1;i<=31;i++){document.write(`<option>${i}</option>`);}</script>
+        </select>
+        <select name="month"><option value="">Month</option>
+          <option>1</option><option>2</option><option>3</option>
+          <option>4</option><option>5</option><option>6</option>
+          <option>7</option><option>8</option><option>9</option>
+          <option>10</option><option>11</option><option>12</option>
+        </select>
+        <select name="year"><option value="">Year</option>
+          <script>for(let y=1990;y<=2030;y++){document.write(`<option>${y}</option>`);}</script>
+        </select>
+      </td>
+    </tr>
+
+    <tr><td>Mobile no.:</td>
+      <td><input type="text" name="mobile_no" value="+91" required></td></tr>
+
+    <tr><td>Alter phone no.:</td>
+      <td><input type="text" name="alt_phone_no"></td></tr>
+
+    <tr><td>Email id:</td>
+      <td><input type="email" name="email" required></td></tr>
+
+    <tr><td>Aadhar No:</td>
+      <td><input type="text" name="aadhar_no" required></td></tr>
+
+    <tr><td>Gender:</td>
+      <td><input type="radio" name="gender" value="Male"> Male
+          <input type="radio" name="gender" value="Female"> Female</td></tr>
+
+    <tr><td>Religion:</td>
+      <td><input type="text" name="religion" required></td></tr>
+
+    <tr><td>Blood Group:</td>
+      <td><input type="text" name="blood_group"></td></tr>
+
+    <tr><td>Community:</td>
+      <td><input type="text" name="community"></td></tr>
+
+    <tr><td>Department:</td>
+      <td><input type="text" name="department"></td></tr>
+
+    <tr><td>UG Course:</td>
+      <td><input type="text" name="course"></td></tr>
+
+    <tr><td>Year of study:</td>
+      <td><input type="text" name="year_of_study" required></td></tr>
+
+    <tr><td>Country:</td>
+      <td><input type="text" name="country"></td></tr>
+
+    <tr><td>City:</td>
+      <td><input type="text" name="city"></td></tr>
+
+    <tr><td>Quota:</td>
+      <td><input type="text" name="quota"></td></tr>
+
+    <tr><td>Address:</td>
+      <td><textarea name="address" cols="48" rows="5"></textarea></td></tr>
+
+    <tr><td colspan="2" align="center">
+      <button type="submit">Submit Registration</button>
+    </td></tr>
+  </table>
+</form>
+
+</body>
+</html>
